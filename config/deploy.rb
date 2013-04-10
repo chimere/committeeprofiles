@@ -2,12 +2,13 @@
 # 'https://dowdrake.com/posts/1-rails-3-2-webfaction-capistrano-tips'
 
 set :application, "committeeprofiles"
-set :repository,  "//Users/chimereokoro/Developer/committee/.git"
+set :repository,  "https://github.com/chimere/committeeprofiles.git"
+# set :branch, "master"
 
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-set :deploy_to, "home/chimere/webapps/committeeprofiles"
+set :deploy_to, "/home/chimere/webapps/committeeprofiles"
 
 set :default_environment, {
      'PATH' => "#{deploy_to}/bin:$PATH",

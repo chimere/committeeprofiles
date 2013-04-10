@@ -1,0 +1,74 @@
+<div class="progress">
+  <div class="bar" style="width: 33%;"></div>
+</div>
+<%= render layout: 'form' do |f| %>
+<fieldset>
+    <legend>Personal Information</legend>  
+<div class="control-group">
+    <%= f.label :title, :class => "control-label" %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="control-group">
+    <%= f.label :fname, "First Name", :class => "control-label" %><br />
+    <%= f.text_field :fname %>
+  </div>
+  <div class="control-group">
+    <%= f.label :lname, "Last Name", :class => "control-label" %><br />
+    <%= f.text_field :lname %>
+  </div>
+  <div class="control-group">
+	<div class="controls">
+	<span class="label label-info">Sex :</span>
+	<%= f.label :sex, "Male", :class => "radio inline" %>
+    <%= f.radio_button(:sex, "male") %> 
+	<%= f.label :sex, "Female", :class => "radio inline" %>
+    <%= f.radio_button(:sex, "female") %> 	
+	</div>	
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => "control-label" %><br />
+    <%= f.text_area :address, :cols=>20,:rows=>5 %>
+  </div>
+  <div class="control-group">
+    <%= f.label :telephone, :class => "control-label" %><br />
+    <%= f.text_field :telephone %>
+  </div>
+  <div class="control-group">
+    <%= f.label :mobile, :class => "control-label" %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => "control-label" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="control-group">
+    <%= f.label :dob, "Date of Birth", :class => "control-label" %><br />
+    <%= f.date_select :dob, :order => [:day, :month, :year], :start_year => 1930, :end_year => Time.now.year - 18 %>
+  </div>
+  <div class="control-group">
+    <%= f.label :state, :class => "control-label" %><br />
+    <%= f.text_field :state %>
+  </div>
+  <div class="control-group">
+    <%= f.label :lga, "Local Government Area", :class => "control-label"%><br />
+    <%= f.text_field :lga %>
+  </div>
+  <div class="control-group">
+    <%= f.label :constituency, :class => "control-label"%><br />
+    <%= f.text_field :constituency %>
+  </div>
+  <div class="control-group">
+    <%= f.label :party, "Political Party", :class => "control-label" %><br />
+    <%= f.text_field :party %>
+  </div>
+  <div class="control-group">
+    <%= f.label :spouse, "Name of Spouse", :class => "control-label" %><br />
+    <%= f.text_field :spouse %>
+  </div>
+  <div class="control-group">
+    <%= f.label :children, "Number of Children", :class => "control-label" %><br />
+    <%= f.text_field :children %>
+  </div>
+</fieldset>
+
+<% end %>

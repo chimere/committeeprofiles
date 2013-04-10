@@ -1,0 +1,37 @@
+<div class="progress">
+  <div class="bar" style="width: 66%;"></div>
+</div>
+<%= render layout: 'form' do |f| %>
+<fieldset>
+    <legend>Education</legend>
+<div class="control-group">
+    <%= f.label :highest_degree, "Highest Degree Obtained", :class => "control-label" %><br />
+    <%= f.text_field :highest_degree %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :secondary_school, "Secondary School Attended", :class => "control-label" %><br />
+    <%= f.text_field :secondary_school %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :first_degree, "First Degree", :class => "control-label" %><br />
+    <%= f.text_field :first_degree %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :second_degree, "Second Degree", :class => "control-label" %><br />
+    <%= f.text_field :second_degree %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :doctorate, "Doctorate", :class => "control-label" %><br />
+    <%= f.text_field :doctorate %>
+  </div>
+
+<div class="control-group">
+    <%= f.label :postdoctorate, "Post Doctorate", :class => "control-label" %><br />
+    <%= f.text_field :postdoctorate %>
+  </div>
+</fieldset>
+<% end %>
